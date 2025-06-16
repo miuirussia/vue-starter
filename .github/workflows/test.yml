@@ -1,0 +1,26 @@
+name: "Build and test"
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          corepack enable
+          pnpm install --frozen-lockfile && pnpm build
+          (cd dist && zip -r ../dist.zip .)
+
+      - name: Archive result
+        uses: actions/upload-artifact@v4
+        with:
+          name: release
+          path: dist.zip
