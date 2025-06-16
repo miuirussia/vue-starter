@@ -8,6 +8,8 @@ import tailwindcss from "@tailwindcss/vite";
 import mkcert from "vite-plugin-mkcert";
 import inspect from "vite-plugin-inspect";
 
+const isDevelopment = process.env.NODE_ENV === "development";
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -15,6 +17,6 @@ export default defineConfig({
     vue(),
     tsconfigPaths({ loose: true }),
     tailwindcss(),
-    mkcert({ mkcertPath: "/usr/bin/mkcert", savePath: path.join(os.homedir(), ".config", "vite-plugin-mkcert") }),
+    isDevelopment ? mkcert({ mkcertPath: "/usr/bin/mkcert", savePath: path.join(os.homedir(), ".config", "vite-plugin-mkcert") }) : undefined,
   ],
 });
