@@ -6,7 +6,7 @@ const test = ref<string>("TEEEEST");
 </script>
 
 <template>
-  <div class="flex justify-center">
+  <div css:flex css:justify-center>
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>

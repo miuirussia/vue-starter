@@ -12,7 +12,9 @@ const { count, double } = storeToRefs(counter);
   h1 {{ props.msg }}
 
   div.card
-    button(type="button" @click="counter.increment") count is {{ count }}, double is {{ double }}
+    button(type="button" @click="counter.decrement") -
+    span(css:mx-3) count is {{ count }}, double is {{ double }}
+    button(type="button" @click="counter.increment") +
     p
       | Edit
       |
