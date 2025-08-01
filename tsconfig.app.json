@@ -19,7 +19,7 @@
   "vueCompilerOptions": {
     "strictTemplates": true,
     "strictCssModules": true,
-    "plugins": ["@vue/language-plugin-pug"],
+    "plugins": ["@vue/language-plugin-pug"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "env.d.ts"],
   "exclude": ["src/**/*.spec.ts"]
