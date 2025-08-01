@@ -13,12 +13,12 @@ const { count, double } = storeToRefs(counter);
 
   div.card
     button(type="button" @click="counter.decrement") -
-    span(css:mx-3) count is {{ count }}, double is {{ double }}
+    span(css:m="x-3") count is {{ count }}, double is {{ double }}
     button(type="button" @click="counter.increment") +
     p
       | Edit
       |
-      code.font-mono components/HelloWorld.vue
+      code(css:font="mono") components/HelloWorld.vue
       |
       | to test HMR
 
