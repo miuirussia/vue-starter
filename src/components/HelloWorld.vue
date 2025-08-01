@@ -18,7 +18,7 @@ const { count, double } = storeToRefs(counter);
     p
       | Edit
       |
-      code components/HelloWorld.vue
+      code.font-mono components/HelloWorld.vue
       |
       | to test HMR
 
