@@ -5,17 +5,14 @@ import { ref } from "vue";
 const test = ref<string>("TEEEEST");
 </script>
 
-<template>
-  <div css:flex css:justify="center">
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-  <div>{{ test }}</div>
+<template lang="pug">
+  div(css:flex css:justify="center")
+    a(href="https://vite.dev" target="_blank")
+      img(src="/vite.svg" class="logo" alt="Vite logo")
+    a(href="https://vuejs.org/" target="_blank")
+      img(src="./assets/vue.svg" class="logo vue" alt="Vue logo")
+  HelloWorld(msg="Vite + Vue")
+  div {{ test }}
 </template>
 
 <style scoped>
